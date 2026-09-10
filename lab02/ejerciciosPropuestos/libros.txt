@@ -1,0 +1,16 @@
+L01,La_caida,128
+L02,El_mito_de_sisifo,160
+L03,Memorias_del_subsuelo,168
+L04,El_proceso,352
+L05,Carta_al_padre,104
+L06,El_mundo_de_Sofia,584
+L07,Jorge_o_el_hijo_de_pueblo,507
+L08,El_segundo_sexo,728
+L09,Como_destruir_una_democracia,264
+L10,La_insoportable_levedad_del_ser,336
+L11,La_isla,379
+L12,Un_mundo_feliz,256
+L13,Etica_a_Nicomaco,320
+L14,La_condicion_humana,384
+L15,La_vegetariana,168
+L16,Tao_Te_Ching,148

@@ -1,33 +1,216 @@
-\documentclass[11pt,a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage{amsmath,amssymb,amsthm}
+%package list
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[top=3cm, bottom=3cm, outer=3cm, inner=3cm]{geometry}
+\usepackage{multicol}
 \usepackage{graphicx}
-\usepackage{geometry}
-\geometry{margin=2.5cm}
+\usepackage{url}
+%\usepackage{cite}
 \usepackage{hyperref}
-\usepackage{listings}
+\usepackage{array}
+%\usepackage{multicol}
+\newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
+\usepackage{natbib}
+\usepackage{pdfpages}
+\usepackage{multirow}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{svg}
 \usepackage{xcolor}
+\usepackage{listings}
+\lstdefinestyle{ascii-tree}{
+    literate={├}{|}1 {─}{--}1 {└}{+}1 
+  }
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{red},
+  keywordstyle=\color{blue}
+}
+%\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{array}
 
-\title{Laboratorio 08 -- Análisis y Diseño de Algoritmos}
-\author{}
-\date{}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\itemEmail}{ccapatinta@unsa.edu.pe}
+\newcommand{\itemStudent}{Capatinta Almanza Camilo B. A.}
+\newcommand{\itemCourse}{Lab. Análisis y Diseño de Algoritmos}
+\newcommand{\itemCourseCode}{1702231}
+\newcommand{\itemSemester}{IV}
+\newcommand{\itemUniversity}{Universidad Nacional de San Agustín de Arequipa}
+\newcommand{\itemFaculty}{Facultad de Ingeniería de Producción y Servicios}
+\newcommand{\itemDepartment}{Departamento Académico de Ingeniería de Sistemas e Informática}
+\newcommand{\itemSchool}{Escuela Profesional de Ingeniería de Sistemas}
+\newcommand{\itemAcademic}{2026 - B}
+\newcommand{\itemInput}{------}
+\newcommand{\itemOutput}{------}
+\newcommand{\itemPracticeNumber}{08}
+\newcommand{\itemTheme}{Práctica de laboratorio 08}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[english,spanish]{babel}
+\usepackage[utf8]{inputenc}
+\AtBeginDocument{\selectlanguage{spanish}}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\refname}{Referencias}
+\renewcommand{\tablename}{Tabla} %esto no funciona cuando se usa babel
+\AtBeginDocument{%
+	\renewcommand\tablename{Tabla}
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{40.51407pt}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\fancyhead[L]{\raisebox{-0.2\height}{\includegraphics[width=3cm]{../img/logo_episunsa.png}}}
+\fancyhead[C]{\fontsize{7}{7}\selectfont	\itemUniversity \\ \itemFaculty \\ \itemDepartment \\ \itemSchool \\ \textbf{\itemCourse}}
+\fancyhead[R]{\raisebox{-0.2\height}{\includegraphics[width=1.2cm]{../img/logo_abet}}}
+\fancyfoot[L]{Estudiante Capatinta C.}
+\fancyfoot[C]{\itemCourse}
+\fancyfoot[R]{Página \thepage}
+
+% para el codigo fuente
+\usepackage{listings}
+\usepackage{color, colortbl}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{codebackground}{rgb}{0.95, 0.95, 0.92}
+\definecolor{tablebackground}{rgb}{0.8, 0, 0}
+
+\lstset{frame=tb,
+	language=bash,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	backgroundcolor= \color{codebackground},
+}
 
 \begin{document}
-\maketitle
+	
+	\vspace*{10px}
+	
+	\begin{center}
+		\parbox{0.8\textwidth}{\centering\fontsize{17}{20}\selectfont\textbf{Informe de laboratorio \itemPracticeNumber}}
+	\end{center}
+	\begin{center}
+		\parbox{0.8\textwidth}{\centering\textbf{\Large Tema: \itemTheme}}
+	\end{center}
+	%\vspace*{0.5cm}	
 
-\section{Introducción}
-Breve descripción del laboratorio.
+	\begin{flushright}
+		\begin{tabular}{|M{2.5cm}|N|}
+			\hline 
+			\rowcolor{tablebackground}
+			\color{white} \textbf{Nota}  \\
+			\hline 
+			     \\[30pt]
+			\hline 			
+		\end{tabular}
+	\end{flushright}	
 
-\section{Desarrollo}
+	\begin{table}[h!]
+		\begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}        
+			\hline 
+			\rowcolor{tablebackground}
+			\color{white} \textbf{Estudiante} & \color{white}\textbf{Escuela}  & \color{white}\textbf{Asignatura}   \\
+			\hline 
+			{\itemStudent \par \itemEmail} & \itemSchool & {\itemCourse \par Semestre: \itemSemester \par Código: \itemCourseCode}     \\
+			\hline 			
+		\end{tabular}
+	\end{table}		
+	
+	\begin{table}[H]
+		\begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}
+			\hline 
+			\rowcolor{tablebackground}
+			\color{white}\textbf{Laboratorio} & \color{white}\textbf{Tema}  & \color{white}\textbf{Duración}   \\
+			\hline 
+			\itemPracticeNumber & \itemTheme & 02 horas   \\
+			\hline 
+		\end{tabular}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}
+			\hline 
+			\rowcolor{tablebackground}
+			\color{white}\textbf{Semestre académico} & \color{white}\textbf{Fecha de inicio}  & \color{white}\textbf{Fecha de entrega}   \\
+			\hline 
+			\itemAcademic & \itemInput &  \itemOutput  \\
+			\hline 
+		\end{tabular}
+	\end{table}
+	
+\section{Ejercicios/Problemas propuestos}
+
 \subsection{Ejercicio 1}
-\subsubsection{Análisis}
-\subsubsection{Código}
-\begin{lstlisting}[language=C++]
-// Código del ejercicio 1
-\end{lstlisting}
+% Aquí se incluirá el código del ejercicio 1.
+% \lstinputlisting[language=c++, caption={Ejercicio 01},numbers=left,]{../ejerciciosPropuestos/e1.cpp}
+
+\subsection{Ejercicio 2}
+% Aquí se incluirá el código del ejercicio 2.
+% \lstinputlisting[language=c++, caption={Ejercicio 02},numbers=left,]{../ejerciciosPropuestos/e2.cpp}
+
+\subsection{Ejercicio 3}
+% Aquí se incluirá el código del ejercicio 3.
+% \lstinputlisting[language=c++, caption={Ejercicio 03},numbers=left,]{../ejerciciosPropuestos/e3.cpp}
+
+\subsection{Ejercicio 4}
+% Aquí se incluirá el código del ejercicio 4.
+% \lstinputlisting[language=c++, caption={Ejercicio 04},numbers=left,]{../ejerciciosPropuestos/e4.cpp}
+
+\subsection{Ejercicio 5}
+% Aquí se incluirá el código del ejercicio 5.
+% \lstinputlisting[language=c++, caption={Ejercicio 05},numbers=left,]{../ejerciciosPropuestos/e5.cpp}
+
+\section{Cuestionario}
+% Pendiente de completar.
 
 \section{Conclusiones}
-Conclusiones del laboratorio.
+% Pendiente de completar.
 
-\end{document}
+	%\begin{itemize}	
+	%	\item Se creo el archivo \textbf{.gitignore} para no considerar los archivos %\textbf{*.class} que son innecesarios hacer seguimiento.
+	%\end{itemize}
+	%\begin{lstlisting}[language=bash,caption={Creando .gitignore}]
+	%	$ vim lab01/.gitignore
+	%\end{lstlisting}
+	%\begin{lstlisting}[language=bash,caption={lab01/.gitignore}]
+	%	*.class
+	%\end{lstlisting}
+	%\begin{lstlisting}[language=bash,caption={Commit: Creando .gitignore para archivos *.class}]
+	%	$ git add .
+	%	$ git commit -m "Creando .gitignore para archivos *.class"			
+	%	$ git push -u origin main
+	%\end{lstlisting}
+	
+	%\begin{lstlisting}[language=bash,caption={Creando .gitignore}]
+	%	$ vim lab01/Insertion.java
+	%\end{lstlisting}
+	
+    
+%\clearpage
+%\bibliographystyle{apalike}
+%\bibliographystyle{IEEEtranN}
+%\bibliography{bibliography}
+			
+\end{document}\noindent\textbf{Enunciado:}

@@ -1,0 +1,15 @@
+P001,Laptop Gamer,3500.00
+P002,Mouse Inalambrico,45.50
+P003,Teclado Mecanico,120.00
+P004,Monitor 24 Pulgadas,850.50
+P005,Audifonos Bluetooth,199.90
+P006,Silla Gamer,950.00
+P007,Disco SSD 1TB,320.00
+P008,Memoria RAM 16GB,210.00
+P009,Tarjeta Grafica,2800.00
+P010,Procesador i7,1450.00
+P011,Impresora Multifuncional,450.00
+P012,Webcam HD,130.00
+P013,Alfombrilla Mouse,25.00
+P014,Router Wi-Fi 6,290.00
+P015,Parlantes USB,65.00

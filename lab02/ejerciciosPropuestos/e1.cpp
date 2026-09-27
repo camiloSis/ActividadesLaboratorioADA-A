@@ -57,27 +57,27 @@ int main() {
 
     cout << "Insertion Sort:" << endl;
 
-    auto inicioInsertion = chrono::high_resolution_clock::now();
-    insertionSort(arrInsertion, n);
-    auto finInsertion = chrono::high_resolution_clock::now();
+        auto inicioInsertion = chrono::high_resolution_clock::now();
+        insertionSort(arrInsertion, n);
+        auto finInsertion = chrono::high_resolution_clock::now();
 
-    auto tiempoInsertion = chrono::duration_cast<chrono::microseconds>(finInsertion - inicioInsertion);
+        auto tiempoInsertion = chrono::duration_cast<chrono::microseconds>(finInsertion - inicioInsertion);
 
-    cout << "Tiempo de ejecucion de InsertionSort: "
-         << tiempoInsertion.count()
-         << " microsegundos" << endl;
+        cout << "Tiempo de ejecucion de InsertionSort: "
+            << tiempoInsertion.count()
+            << " microsegundos" << endl;
 
     cout << "\nSelection Sort:" << endl;
 
-    auto inicioSelection = chrono::high_resolution_clock::now();
-    selectionSort(arrSelection, n);
-    auto finSelection = chrono::high_resolution_clock::now();
+        auto inicioSelection = chrono::high_resolution_clock::now();
+        selectionSort(arrSelection, n);
+        auto finSelection = chrono::high_resolution_clock::now();
 
-    auto tiempoSelection = chrono::duration_cast<chrono::microseconds>(finSelection - inicioSelection);
+        auto tiempoSelection = chrono::duration_cast<chrono::microseconds>(finSelection - inicioSelection);
 
-    cout << "Tiempo de ejecucion de SelectionSort: "
-         << tiempoSelection.count()
-         << " microsegundos" << endl;
+        cout << "Tiempo de ejecucion de SelectionSort: "
+            << tiempoSelection.count()
+            << " microsegundos" << endl;
 
     return 0;
 }

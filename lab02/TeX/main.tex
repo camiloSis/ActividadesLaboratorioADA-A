@@ -50,7 +50,7 @@
 \newcommand{\itemSchool}{Escuela Profesional de Ingeniería de Sistemas}
 \newcommand{\itemAcademic}{2026 - B}
 \newcommand{\itemInput}{10/09/2026}
-\newcommand{\itemOutput}{-----------}
+\newcommand{\itemOutput}{14/09/2026}
 \newcommand{\itemPracticeNumber}{02}
 \newcommand{\itemTheme}{Ordenamiento: Insertion Sort, Selection Sort}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -169,10 +169,8 @@
     \lstinputlisting[language=c++, caption={Ejercicio 01: InsertionSort y SelectionSort con más datos},numbers=left,]{../ejerciciosPropuestos/e1.cpp}
 
     \begin{itemize}
-        \item En el código anterior se puede observar el código de la solución alternativa.
-        \item De la línea 7 - 21 se implementa la solucion propuesta. 
-        \item En la línea 24 - 27 se implementa la solución de Euclides. 
-        \item En main() se hace la comparación de ambos algoritmos, dejando en evidencia que Euclides es por mucho más eficiente. 
+        \item Se prueban InsertionSort y SelectionSort con un array de igual tamaño y de mismos datos, llegando ambos al mismo resultado pero 
+		con tiempos diferentes, siendo más eficiente SelectionSort porque demoró menos tiempo. Aunque esto puede cambiar en diferentes contextos y situaciones. 
     \end{itemize}
 
     \begin{figure}[H]
@@ -189,10 +187,8 @@
     \lstinputlisting[language=c++, caption={Ejercicio 02: InsertionSort en una lista de n nombres y comparaciones con otras listas.},numbers=left,]{../ejerciciosPropuestos/e2.cpp}
 
     \begin{itemize}
-        \item En el código anterior se puede observar el código de la solución alternativa.
-        \item De la línea 7 - 21 se implementa la solucion propuesta. 
-        \item En la línea 24 - 27 se implementa la solución de Euclides. 
-        \item En main() se hace la comparación de ambos algoritmos, dejando en evidencia que Euclides es por mucho más eficiente. 
+        \item Como el usuario ingresará datos, usamos <Vector> para arrays dinamicos. En escencia el algoritmo se encuentra en las lineas 7 - 18, insertionSortNombres(vector<string>\& arr) compara elementos y los reordena, desplazando elementos mayores hacia la izquierda para hacer
+		espacio a los elementos que se colocarán en sus lugares.  
     \end{itemize}
 
     \begin{figure}[H]
@@ -202,6 +198,12 @@
     \label{fig:diagrama}
     \end{figure}
 
+	\begin {itemize}
+		\item Viendo la comparación de las 3 listas, quien demora menos tiempo es la lista desordenada, lo cual es contraintuitivo ya que una lista ordenada debería tomar menos tiempo. Esto es debido a que
+		las condiciones del hardware pueden afectar, además las comparaciones son consecutivas, no simultáneas, por lo que para pequeños datos (3 strings) esta comparación no muestra realmente las complejidades 
+		temporales del algortimo.
+	\end{itemize}
+
 	\subsection{Ejercicio 3}
 
 		Implementa el algoritmo Selection Sort sobre un arreglo de números flotantes. Muestra el número de comparaciones e intercambios realizados.
@@ -209,10 +211,8 @@
 		\lstinputlisting[language=c++, caption={Ejercicio 03: SelectionSort sobre arreglo de numeros float.},numbers=left,]{../ejerciciosPropuestos/e3.cpp}
 
     \begin{itemize}
-        \item En el código anterior se puede observar el código de la solución alternativa.
-        \item De la línea 7 - 21 se implementa la solucion propuesta. 
-        \item En la línea 24 - 27 se implementa la solución de Euclides. 
-        \item En main() se hace la comparación de ambos algoritmos, dejando en evidencia que Euclides es por mucho más eficiente. 
+        \item En las líneas 6 – 24, la función selectionSortFloats asume inicialmente que el primer elemento de la parte aún no ordenada es el mínimo (minIdx = i). Luego recorre los elementos restantes y, en cada comparación, actualiza minIdx si encuentra un valor 
+		menor. Al finalizar el recorrido, intercambia el mínimo encontrado con el elemento de la posición i, únicamente si están en posiciones diferentes. El programa usa contadores para registrar el número de comparaciones y de intercambios realizados.
     \end{itemize}
 
     \begin{figure}[H]
@@ -228,10 +228,8 @@
 		\lstinputlisting[language=c++, caption={Ejercio 04: Función que recibe el tipo de ordenamiento.},numbers=left,]{../ejerciciosPropuestos/e4.cpp}
 
     \begin{itemize}
-        \item En el código anterior se puede observar el código de la solución alternativa.
-        \item De la línea 7 - 21 se implementa la solucion propuesta. 
-        \item En la línea 24 - 27 se implementa la solución de Euclides. 
-        \item En main() se hace la comparación de ambos algoritmos, dejando en evidencia que Euclides es por mucho más eficiente. 
+        \item Se usan las librerías cstdlib y algorithm para generar y colocar números pseudoaleatorios en los vectores. En main() se crea un vector con los tamaños 1000, 5000 y 10 000. Para cada tamaño, se crea un vector de enteros y se llena con valores entre 0 y 99999. Después se llama a evaluarOrdenamiento() dos veces: una para 
+		Insertion Sort y otra para Selection Sort. Cada algoritmo recibe una copia del mismo vector original, permitiendo comparar sus tiempos de ejecución de manera justa.
     \end{itemize}
 
     \begin{figure}[H]
@@ -262,10 +260,15 @@
 		\lstinputlisting[language=c++, caption={Ejercio 05: Creación de aplicación que ordena una lista de libros por número de páginas.},numbers=left,]{../ejerciciosPropuestos/e5.cpp}
 
     \begin{itemize}
-        \item En el código anterior se puede observar el código de la solución alternativa.
-        \item De la línea 7 - 21 se implementa la solucion propuesta. 
-        \item En la línea 24 - 27 se implementa la solución de Euclides. 
-        \item En main() se hace la comparación de ambos algoritmos, dejando en evidencia que Euclides es por mucho más eficiente. 
+        \item Lee los libros almacenados en libros.txt, obteniendo de cada uno su
+  código, título y cantidad de páginas. Luego crea dos copias de la misma lista para
+  ordenarlas de forma descendente según el número de páginas: una mediante Insertion
+  Sort y otra mediante Selection Sort. Durante cada ordenamiento, registra la cantidad
+  de comparaciones, los movimientos o intercambios realizados y el tiempo de ejecución.
+  Después muestra estos resultados en pantalla para comparar ambos algoritmos y,
+  finalmente, guarda la lista ordenada por Insertion Sort en el archivo
+  libros\_ordenados.csv.
+
     \end{itemize}
 
     \begin{figure}[H]
@@ -284,15 +287,83 @@
 
 
 	\section{Cuestionario}
+
 		\begin{enumerate}
+
 			\item Explica con tus propias palabras: ¿cuál de los dos algoritmos es más eficiente si la lista ya está ordenada? ¿Por qué? Usa un ejemplo distinto al visto en clase.
-			\item En tus palabras, ¿qué significa que un algoritmo sea ``in-place''? Da un ejemplo de tu vida cotidiana donde ``ordenar sin usar espacio extra'' tendría sentido.
-			\item ¿Por qué se dice que Selection Sort no es estable? Describe un caso concreto (puede ser inventado por ti) donde eso cause un problema real.
-			\item ¿Qué parte te costó más entender entre Insertion Sort y Selection Sort, y cómo la resolviste?
-			\item Si tuvieras que explicarle a un compañero que faltó a la práctica cómo optimizar uno de estos dos algoritmos, ¿qué le dirías?
+			
+			Si la lista ya está ordenada, Insertion Sort es más eficiente. Esto se debe
+			a que, al revisar cada elemento, observa que ya está en la posición correcta y no
+			necesita desplazar elementos. Por ejemplo, si se tiene la lista de edades $\{18,
+			20, 22, 25, 30\}$, Insertion Sort solo compara cada edad con la anterior y
+			continúa, porque no encuentra ningún valor que deba mover. En cambio, Selection
+			Sort sigue buscando el menor elemento en toda la parte no ordenada, aunque los
+			datos ya estén ordenados.
+
+			\item En tus palabras, ¿qué significa que un algoritmo sea "in-place"? Da un
+	ejemplo de tu vida cotidiana donde "ordenar sin usar espacio extra" tendría
+	sentido.
+
+			Que un algoritmo sea \textit{in-place} significa que ordena los datos usando
+			muy poca memoria adicional, normalmente sin crear otra lista del mismo tamaño. Por
+			ejemplo, al ordenar libros en un estante, se puede tomar un libro y cambiarlo de
+			posición con otro dentro del mismo estante, sin necesitar una segunda estantería
+			para guardar todos los libros temporalmente.
+
+			\item ¿Por qué se dice que Selection Sort no es estable? Describe un caso concreto
+	(puede ser inventado por ti) donde eso cause un problema real.
+			
+			Se dice que Selection Sort no es estable porque puede cambiar el orden
+			original de dos elementos que tienen la misma clave de comparación. Por ejemplo,
+			si se ordenan libros por cantidad de páginas y se tienen los libros
+			\texttt{A(200)}, \texttt{B(150)} y \texttt{C(200)}, al hacer un intercambio, los
+			libros A y C, que tienen la misma cantidad de páginas, podrían quedar en un orden
+			diferente al original. Esto sería un problema si el orden inicial representara
+			otro criterio importante, como la fecha de publicación o el orden en que los
+			libros fueron registrados.
+
+			\item ¿Qué parte te costó más entender entre Insertion Sort y Selection Sort, y cómo
+	la resolviste?
+			
+			La parte que más me costó entender fue la diferencia entre los
+			desplazamientos de Insertion Sort y los intercambios de Selection Sort. Lo resolví
+			siguiendo manualmente una lista pequeña y observando qué ocurría en cada
+			iteración. Así comprendí que Insertion Sort mueve elementos para insertar uno en
+			su posición correcta, mientras que Selection Sort busca el menor o mayor elemento
+			y realiza un intercambio al final de cada pasada.
+
+			\item Si tuvieras que explicarle a un compañero que faltó a la práctica cómo
+	optimizar uno de estos dos algoritmos, ¿qué le dirías? 
+			
+			Para optimizar Insertion Sort, le diría a un compañero que es conveniente
+			usarlo cuando la lista está ordenada o casi ordenada, porque en esos casos realiza
+			pocos desplazamientos y puede ser rápido. Sin embargo, para listas muy grandes y
+			desordenadas, recomendaría utilizar algoritmos más eficientes, como Merge Sort o
+			Quick Sort, ya que Insertion Sort y Selection Sort tienen un tiempo de ejecución
+			aproximado de $O(n^2)$.
 		\end{enumerate}
 
 	\section{Conclusiones}
+
+	\begin{itemize}
+		\item Se comprobó que Insertion Sort y Selection Sort permiten ordenar datos
+		correctamente, pero su rendimiento puede variar según el orden inicial de los
+		elementos.
+
+		\item Insertion Sort resulta más conveniente cuando los datos ya están ordenados o
+		casi ordenados, debido a que requiere menos desplazamientos.
+
+		\item Selection Sort realiza una cantidad fija de comparaciones para un mismo
+		tamaño de lista, aunque esta ya se encuentre ordenada; sin embargo, normalmente
+		realiza pocos intercambios.
+
+		\item Ambos algoritmos tienen una complejidad aproximada de $O(n^2)$, por lo que
+		no son los más recomendables para listas muy grandes.
+
+		\item La práctica permitió comprender cómo medir comparaciones, movimientos e
+		tiempo de ejecución para evaluar el comportamiento de un algoritmo de
+		ordenamiento.
+	\end{itemize}
 
 	%\begin{itemize}	
 	%	\item Se creo el archivo \textbf{.gitignore} para no considerar los archivos %\textbf{*.class} que son innecesarios hacer seguimiento.
@@ -314,13 +385,6 @@
 	%\end{lstlisting}
 	
     
-\section{Referencias}
-\begin{itemize}
-    \item Wikipedia. (2025). \textit{Máximo común divisor}. Recuperado de \url{https://es.wikipedia.org/wiki/M\%C3\%A1ximo_com\%C3\%BAn_divisor}
-    \item Wikipedia. (2025). \textit{Algoritmo de Euclides}. Recuperado de \url{https://es.wikipedia.org/wiki/Algoritmo_de_Euclides}
-    \item Informatec Digital. (2025). \textit{El Algoritmo de Euclides: Historia, Uso y Aplicaciones}. Recuperado de \url{https://informatecdigital.com/el-algoritmo-de-euclides/}
-\end{itemize}
-	
 %\clearpage
 %\bibliographystyle{apalike}
 %\bibliographystyle{IEEEtranN}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.18)  1 OCT 2026 08:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.18)  1 OCT 2026 09:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -711,27 +711,176 @@ File: lstlang1.sty 2025/11/14 1.11b listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
 )
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 167.
+ (../e-n/e1.cpp)
 
-! Package Listings Error: File `../e-n/e1(.cpp)' not found.
+LaTeX Warning: File `../img/e1.png' not found on input line 175.
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: cpp)
 
-Enter file name: 
-/home/camiloasd/Documentos/VS/labADA/Unidad2/lab05/TeX/main.tex:167: Emergency stop.
-<read *> 
-         
-l.167 ...ercicio 01},numbers=left,]{../e-n/e1.cpp}
-                                                  ^^M
-*** (cannot \read from terminal in nonstop modes)
+/home/camiloasd/Documentos/VS/labADA/Unidad2/lab05/TeX/main.tex:175: Package pdftex.def Error: File `../img/e1.png' not found: using draft setting.
 
- 
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.175 ...phics[width=0.8\textwidth]{../img/e1.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<../img/logo_episunsa.png, id=7, 195.73125pt x 58.2175pt>
+File: ../img/logo_episunsa.png Graphic file (type png)
+<use ../img/logo_episunsa.png>
+Package pdftex.def Info: ../img/logo_episunsa.png  used on input line 179.
+(pdftex.def)             Requested size: 85.35826pt x 25.38835pt.
+<../img/logo_abet.png, id=8, 58.2175pt x 65.24374pt>
+File: ../img/logo_abet.png Graphic file (type png)
+<use ../img/logo_abet.png>
+Package pdftex.def Info: ../img/logo_abet.png  used on input line 179.
+(pdftex.def)             Requested size: 34.14322pt x 38.26549pt.
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+ <../img/logo_episunsa.png> <../img/logo_abet.png>] (../e-n/e2.cpp)
+
+LaTeX Warning: File `../img/e2.png' not found on input line 190.
+
+
+/home/camiloasd/Documentos/VS/labADA/Unidad2/lab05/TeX/main.tex:190: Package pdftex.def Error: File `../img/e2.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.190 ...phics[width=0.8\textwidth]{../img/e2.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: ../img/logo_episunsa.png Graphic file (type png)
+<use ../img/logo_episunsa.png>
+Package pdftex.def Info: ../img/logo_episunsa.png  used on input line 194.
+(pdftex.def)             Requested size: 85.35826pt x 25.38835pt.
+File: ../img/logo_abet.png Graphic file (type png)
+<use ../img/logo_abet.png>
+Package pdftex.def Info: ../img/logo_abet.png  used on input line 194.
+(pdftex.def)             Requested size: 34.14322pt x 38.26549pt.
+[2] (../e-n/e3.cpp)
+
+LaTeX Warning: File `../img/e3.png' not found on input line 205.
+
+
+/home/camiloasd/Documentos/VS/labADA/Unidad2/lab05/TeX/main.tex:205: Package pdftex.def Error: File `../img/e3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.205 ...phics[width=0.8\textwidth]{../img/e3.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: ../img/logo_episunsa.png Graphic file (type png)
+<use ../img/logo_episunsa.png>
+Package pdftex.def Info: ../img/logo_episunsa.png  used on input line 209.
+(pdftex.def)             Requested size: 85.35826pt x 25.38835pt.
+File: ../img/logo_abet.png Graphic file (type png)
+<use ../img/logo_abet.png>
+Package pdftex.def Info: ../img/logo_abet.png  used on input line 209.
+(pdftex.def)             Requested size: 34.14322pt x 38.26549pt.
+[3] (../e-n/e4.cpp)
+
+LaTeX Warning: File `../img/e4.png' not found on input line 220.
+
+
+/home/camiloasd/Documentos/VS/labADA/Unidad2/lab05/TeX/main.tex:220: Package pdftex.def Error: File `../img/e4.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.220 ...phics[width=0.8\textwidth]{../img/e4.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: ../img/logo_episunsa.png Graphic file (type png)
+<use ../img/logo_episunsa.png>
+Package pdftex.def Info: ../img/logo_episunsa.png  used on input line 224.
+(pdftex.def)             Requested size: 85.35826pt x 25.38835pt.
+File: ../img/logo_abet.png Graphic file (type png)
+<use ../img/logo_abet.png>
+Package pdftex.def Info: ../img/logo_abet.png  used on input line 224.
+(pdftex.def)             Requested size: 34.14322pt x 38.26549pt.
+[4] (../e-n/e5.cpp)
+
+LaTeX Warning: File `../img/e5.png' not found on input line 235.
+
+
+/home/camiloasd/Documentos/VS/labADA/Unidad2/lab05/TeX/main.tex:235: Package pdftex.def Error: File `../img/e5.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.235 ...phics[width=0.8\textwidth]{../img/e5.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: ../img/logo_episunsa.png Graphic file (type png)
+<use ../img/logo_episunsa.png>
+Package pdftex.def Info: ../img/logo_episunsa.png  used on input line 239.
+(pdftex.def)             Requested size: 85.35826pt x 25.38835pt.
+File: ../img/logo_abet.png Graphic file (type png)
+<use ../img/logo_abet.png>
+Package pdftex.def Info: ../img/logo_abet.png  used on input line 239.
+(pdftex.def)             Requested size: 34.14322pt x 38.26549pt.
+[5]
+File: ../img/logo_episunsa.png Graphic file (type png)
+<use ../img/logo_episunsa.png>
+Package pdftex.def Info: ../img/logo_episunsa.png  used on input line 271.
+(pdftex.def)             Requested size: 85.35826pt x 25.38835pt.
+File: ../img/logo_abet.png Graphic file (type png)
+<use ../img/logo_abet.png>
+Package pdftex.def Info: ../img/logo_abet.png  used on input line 271.
+(pdftex.def)             Requested size: 34.14322pt x 38.26549pt.
+ [6] (./main.aux
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
+)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
+ ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  2190A2D61BEB5EE72AD837EC51CEBE34;982.
+ ) 
 Here is how much of TeX's memory you used:
- 18552 strings out of 467356
- 310526 string characters out of 5418691
- 958724 words of memory out of 6000000
- 47358 multiletter control sequences out of 15000+600000
- 630405 words of font info for 50 fonts, out of 8000000 for 9000
+ 19188 strings out of 467356
+ 319257 string characters out of 5418691
+ 974724 words of memory out of 6000000
+ 47942 multiletter control sequences out of 15000+600000
+ 631349 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,12n,93p,373b,429s stack positions out of 10000i,1000n,20000p,200000b,200000s
-/home/camiloasd/Documentos/VS/labADA/Unidad2/lab05/TeX/main.tex:167:  ==> Fatal error occurred, no output PDF file produced!
+ 94i,16n,93p,373b,1407s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (6 pages, 99382 bytes).
+PDF statistics:
+ 97 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
+ 28 named destinations out of 1000 (max. 500000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+

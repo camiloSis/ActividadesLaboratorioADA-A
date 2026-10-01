@@ -166,7 +166,7 @@
 
         Antes de resolver los ejercicios propuestos, compilen y ejecuten en su computadora el código de Insertion Sort y Selection Sort mostrado en la Sección II. Cámbienlo por un arreglo de datos propio (mínimo 8 elementos) y verifiquen que el resultado ordenado sea correcto. Esto les ayudará a comprobar que entienden cómo funciona cada algoritmo antes de continuar.
 
-    \lstinputlisting[language=c++, caption={Ejercicio 01: InsertionSort y SelectionSort con más datos},numbers=left,]{../ejerciciosPropuestos/e1.cpp}
+    \lstinputlisting[language=c++,numbers=left,]{../ejerciciosPropuestos/e1.cpp}
 
     \begin{itemize}
         \item Se prueban InsertionSort y SelectionSort con un array de igual tamaño y de mismos datos, llegando ambos al mismo resultado pero 
@@ -184,7 +184,7 @@
 
         Implementa el algoritmo Insertion Sort para ordenar una lista de $n$ nombres ingresados por el usuario. Analiza su comportamiento con una lista ya ordenada, una lista en orden inverso y una lista aleatoria. ¿Cómo cambia el tiempo de ejecución?
     
-    \lstinputlisting[language=c++, caption={Ejercicio 02: InsertionSort en una lista de n nombres y comparaciones con otras listas.},numbers=left,]{../ejerciciosPropuestos/e2.cpp}
+    \lstinputlisting[language=c++,numbers=left,]{../ejerciciosPropuestos/e2.cpp}
 
     \begin{itemize}
         \item Como el usuario ingresará datos, usamos <Vector> para arrays dinamicos. En escencia el algoritmo se encuentra en las lineas 7 - 18, insertionSortNombres(vector<string>\& arr) compara elementos y los reordena, desplazando elementos mayores hacia la izquierda para hacer
@@ -208,7 +208,7 @@
 
 		Implementa el algoritmo Selection Sort sobre un arreglo de números flotantes. Muestra el número de comparaciones e intercambios realizados.
     
-		\lstinputlisting[language=c++, caption={Ejercicio 03: SelectionSort sobre arreglo de numeros float.},numbers=left,]{../ejerciciosPropuestos/e3.cpp}
+		\lstinputlisting[language=c++,numbers=left,]{../ejerciciosPropuestos/e3.cpp}
 
     \begin{itemize}
         \item En las líneas 6 – 24, la función selectionSortFloats asume inicialmente que el primer elemento de la parte aún no ordenada es el mínimo (minIdx = i). Luego recorre los elementos restantes y, en cada comparación, actualiza minIdx si encuentra un valor 
@@ -225,7 +225,7 @@
 	\subsection{Ejercicio 4}
 
 		Crea una función que reciba un arreglo y un tipo de ordenamiento (insertion o selection) y aplique el algoritmo correspondiente. Evalúa el rendimiento con 1000, 5000 y 10000 elementos aleatorios.    
-		\lstinputlisting[language=c++, caption={Ejercio 04: Función que recibe el tipo de ordenamiento.},numbers=left,]{../ejerciciosPropuestos/e4.cpp}
+		\lstinputlisting[language=c++,numbers=left,]{../ejerciciosPropuestos/e4.cpp}
 
     \begin{itemize}
         \item Se usan las librerías cstdlib y algorithm para generar y colocar números pseudoaleatorios en los vectores. En main() se crea un vector con los tamaños 1000, 5000 y 10 000. Para cada tamaño, se crea un vector de enteros y se llena con valores entre 0 y 99999. Después se llama a evaluarOrdenamiento() dos veces: una para 
@@ -257,7 +257,7 @@
 			\item Exportar la lista ordenada a un archivo \texttt{.csv}.
 		\end{itemize}
 
-		\lstinputlisting[language=c++, caption={Ejercio 05: Creación de aplicación que ordena una lista de libros por número de páginas.},numbers=left,]{../ejerciciosPropuestos/e5.cpp}
+		\lstinputlisting[language=c++,numbers=left,]{../ejerciciosPropuestos/e5.cpp}
 
     \begin{itemize}
         \item Lee los libros almacenados en libros.txt, obteniendo de cada uno su
@@ -368,19 +368,19 @@
 	%\begin{itemize}	
 	%	\item Se creo el archivo \textbf{.gitignore} para no considerar los archivos %\textbf{*.class} que son innecesarios hacer seguimiento.
 	%\end{itemize}
-	%\begin{lstlisting}[language=bash,caption={Creando .gitignore}]
+	%\begin{lstlisting}[language=bash]
 	%	$ vim lab01/.gitignore
 	%\end{lstlisting}
-	%\begin{lstlisting}[language=bash,caption={lab01/.gitignore}]
+	%\begin{lstlisting}[language=bash]
 	%	*.class
 	%\end{lstlisting}
-	%\begin{lstlisting}[language=bash,caption={Commit: Creando .gitignore para archivos *.class}]
+	%\begin{lstlisting}[language=bash]
 	%	$ git add .
 	%	$ git commit -m "Creando .gitignore para archivos *.class"			
 	%	$ git push -u origin main
 	%\end{lstlisting}
 	
-	%\begin{lstlisting}[language=bash,caption={Creando .gitignore}]
+	%\begin{lstlisting}[language=bash]
 	%	$ vim lab01/Insertion.java
 	%\end{lstlisting}
 	

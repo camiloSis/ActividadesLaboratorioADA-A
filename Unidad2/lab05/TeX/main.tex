@@ -17,15 +17,7 @@
 \useunder{\uline}{\ul}{}
 \usepackage{svg}
 \usepackage{xcolor}
-\usepackage{listings}
-\lstdefinestyle{ascii-tree}{
-    literate={├}{|}1 {─}{--}1 {└}{+}1 
-  }
-\lstset{basicstyle=\ttfamily,
-  showstringspaces=false,
-  commentstyle=\color{red},
-  keywordstyle=\color{blue}
-}
+\usepackage{minted}
 %\usepackage{booktabs}
 \usepackage{caption}
 \usepackage{subcaption}
@@ -78,7 +70,6 @@
 \fancyfoot[R]{Página \thepage}
 
 % para el codigo fuente
-\usepackage{listings}
 \usepackage{color, colortbl}
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -86,22 +77,17 @@
 \definecolor{codebackground}{rgb}{0.95, 0.95, 0.92}
 \definecolor{tablebackground}{rgb}{0.8, 0, 0}
 
-\lstset{frame=tb,
-	language=bash,
-	aboveskip=3mm,
-	belowskip=3mm,
-	showstringspaces=false,
-	columns=flexible,
-	basicstyle={\small\ttfamily},
-	numbers=none,
-	numberstyle=\tiny\color{gray},
-	keywordstyle=\color{blue},
-	commentstyle=\color{dkgreen},
-	stringstyle=\color{mauve},
-	breaklines=true,
-	breakatwhitespace=true,
-	tabsize=3,
-	backgroundcolor= \color{codebackground},
+\setminted{%
+	fontsize=\small,
+	breaklines,
+	breakanywhere,
+	linenos,
+	numbersep=6pt,
+	frame=lines,
+	framesep=3mm,
+	baselinestretch=1,
+	bgcolor=codebackground,
+	tabsize=3
 }
 
 \begin{document}
@@ -164,7 +150,7 @@
 
 \subsection{Ejercicio 1}
 /relleno
-\lstinputlisting[language=c++,numbers=left,]{../e-n/e1.cpp}
+\inputminted{cpp}{../e-n/e1.cpp}
 
 \begin{itemize}
     \item /relleno
@@ -179,7 +165,7 @@
 
 \subsection{Ejercicio 2}
 /relleno
-\lstinputlisting[language=c++,numbers=left,]{../e-n/e2.cpp}
+\inputminted{cpp}{../e-n/e2.cpp}
 
 \begin{itemize}
     \item /relleno
@@ -194,7 +180,7 @@
 
 \subsection{Ejercicio 3}
 /relleno
-\lstinputlisting[language=c++,numbers=left,]{../e-n/e3.cpp}
+\inputminted{cpp}{../e-n/e3.cpp}
 
 \begin{itemize}
     \item /relleno
@@ -209,7 +195,7 @@
 
 \subsection{Ejercicio 4}
 /relleno
-\lstinputlisting[language=c++,numbers=left,]{../e-n/e4.cpp}
+\inputminted{cpp}{../e-n/e4.cpp}
 
 \begin{itemize}
     \item /relleno
@@ -224,7 +210,7 @@
 
 \subsection{Ejercicio 5}
 /relleno
-\lstinputlisting[language=c++,numbers=left,]{../e-n/e5.cpp}
+\inputminted{cpp}{../e-n/e5.cpp}
 
 \begin{itemize}
     \item /relleno
@@ -238,6 +224,14 @@
 \end{figure}
 
 \section{Cuestionario}
+
+	\begin {enumerate}
+		\item ¿Por qué Kruskal necesita una estructura Union-Find, y qué problema resuelve la compresión de caminos dentro de esa estructura?
+		\item ¿En qué se diferencia la estrategia de Prim de la de Kruskal, si ambos son algoritmos golosos?
+		\item ¿Puede un grafo tener más de un árbol de expansión mínimo? ¿Bajo qué condición ocurre esto?
+		\item ¿Por qué se dice que Boruvka es un algoritmo naturalmente paralelizable?
+		\item ¿Qué diferencia fundamental existe entre el problema del árbol de expansión mínimo y el problema del camino más corto visto en el Laboratorio 4?
+	\end{enumerate}
 % Pendiente de completar.
 
 \section{Conclusiones}
@@ -246,22 +240,6 @@
 	%\begin{itemize}	
 	%	\item Se creo el archivo \textbf{.gitignore} para no considerar los archivos %\textbf{*.class} que son innecesarios hacer seguimiento.
 	%\end{itemize}
-	%\begin{lstlisting}[language=bash]
-	%	$ vim lab01/.gitignore
-	%\end{lstlisting}
-	%\begin{lstlisting}[language=bash]
-	%	*.class
-	%\end{lstlisting}
-	%\begin{lstlisting}[language=bash]
-	%	$ git add .
-	%	$ git commit -m "Creando .gitignore para archivos *.class"			
-	%	$ git push -u origin main
-	%\end{lstlisting}
-	
-	%\begin{lstlisting}[language=bash]
-	%	$ vim lab01/Insertion.java
-	%\end{lstlisting}
-	
     
 %\clearpage
 %\bibliographystyle{apalike}

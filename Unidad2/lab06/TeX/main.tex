@@ -40,10 +40,10 @@
 \newcommand{\itemDepartment}{Departamento Académico de Ingeniería de Sistemas e Informática}
 \newcommand{\itemSchool}{Escuela Profesional de Ingeniería de Sistemas}
 \newcommand{\itemAcademic}{2026 - B}
-\newcommand{\itemInput}{------}
-\newcommand{\itemOutput}{------}
+\newcommand{\itemInput}{22/10/2026}
+\newcommand{\itemOutput}{--/10/2026}
 \newcommand{\itemPracticeNumber}{06}
-\newcommand{\itemTheme}{Práctica de laboratorio 06}
+\newcommand{\itemTheme}{Programación Dinámica: Fundamentos y el Problema de la Diligencia}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -150,7 +150,7 @@
 \section{Ejercicios/Problemas propuestos}
 
 \subsection{Ejercicio 1}
-/relleno
+Diseña tu propio problema de la diligencia con \textbf{al menos 5 etapas}, y resuélvelo aplicando explícitamente cada paso de la técnica \textbf{SRTBOT} (documenta S, R, T, B, O y T en tu informe).
 \inputminted{cpp}{../e-n/e1.cpp}
 
 \begin{itemize}
@@ -165,7 +165,13 @@
 \end{figure}
 
 \subsection{Ejercicio 2}
-/relleno
+Implementa \textbf{Fibonacci} de tres formas:
+\begin{enumerate}
+    \item Recursivo ingenuo
+    \item Con memorización (top-down)
+    \item Con tabulación (bottom-up)
+\end{enumerate}
+Compara sus tiempos de ejecución para $n = 10, 20$ y $30$.
 \inputminted{cpp}{../e-n/e2.cpp}
 
 \begin{itemize}
@@ -180,7 +186,7 @@
 \end{figure}
 
 \subsection{Ejercicio 3}
-/relleno
+Modifica el código del problema de la diligencia para que, cuando existan empates como el de D, se impriman \textbf{TODOS} los caminos óptimos encontrados, no solo uno.
 \inputminted{cpp}{../e-n/e3.cpp}
 
 \begin{itemize}
@@ -195,7 +201,7 @@
 \end{figure}
 
 \subsection{Ejercicio 4}
-/relleno
+Aplica la técnica \textbf{SRTBOT} para resolver un problema de camino de costo \textbf{MÁXIMO} (en vez de mínimo) sobre una malla de etapas similar a la del ejercicio resuelto.
 \inputminted{cpp}{../e-n/e4.cpp}
 
 \begin{itemize}
@@ -210,7 +216,7 @@
 \end{figure}
 
 \subsection{Ejercicio 5}
-/relleno
+Investiga y documenta un problema real (logística, finanzas, biología computacional) que pueda modelarse como un problema de decisión multietapa similar al de la diligencia, y explica cómo se definirían sus subproblemas.
 \inputminted{cpp}{../e-n/e5.cpp}
 
 \begin{itemize}
@@ -225,6 +231,7 @@
 \end{figure}
 
 \section{Cuestionario}
+
 \begin{enumerate}
     \item ¿Qué dos condiciones debe cumplir un problema para poder resolverse con Programación Dinámica?
     \item ¿Cuál es la diferencia principal entre memorización y tabulación?

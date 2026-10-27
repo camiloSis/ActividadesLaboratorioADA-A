@@ -154,7 +154,7 @@ Diseña tu propio problema de la diligencia con \textbf{al menos 5 etapas}, y re
 \inputminted{cpp}{../e-n/e1.cpp}
 
 \begin{itemize}
-    \item /relleno
+    \item En este ejercicio se diseña un problema de la diligencia con cinco etapas y una red de caminos con costos. La idea es calcular, desde el final hacia el inicio, el menor costo para llegar al destino y guardar la decisión que lo alcanza. Así se obtiene la ruta óptima y su costo total sin explorar todas las posibilidades.
 \end{itemize}
 
 \begin{figure}[H]
@@ -175,7 +175,7 @@ Compara sus tiempos de ejecución para $n = 10, 20$ y $30$.
 \inputminted{cpp}{../e-n/e2.cpp}
 
 \begin{itemize}
-    \item /relleno
+    \item Aquí se compara el cálculo de Fibonacci en tres formas: recursivo ingenuo, con memoización y con tabulación. El primero repite muchos subproblemas y es mucho más lento; la memoización evita repetir trabajo y la tabulación resuelve de abajo hacia arriba con el mejor rendimiento y menor costo computacional.
 \end{itemize}
 
 \begin{figure}[H]
@@ -190,7 +190,7 @@ Modifica el código del problema de la diligencia para que, cuando existan empat
 \inputminted{cpp}{../e-n/e3.cpp}
 
 \begin{itemize}
-    \item /relleno
+    \item En esta variante se modifica la lógica para conservar todos los caminos óptimos cuando hay empates. En lugar de guardar solo un sucesor, se guarda la lista de decisiones que alcanzan el mismo costo mínimo, y luego se recorren todas esas rutas con una búsqueda DFS para mostrar todos los caminos válidos.
 \end{itemize}
 
 \begin{figure}[H]
@@ -205,7 +205,7 @@ Aplica la técnica \textbf{SRTBOT} para resolver un problema de camino de costo 
 \inputminted{cpp}{../e-n/e4.cpp}
 
 \begin{itemize}
-    \item /relleno
+    \item Este ejercicio aplica la misma técnica de programación dinámica, pero buscando el máximo beneficio en lugar del mínimo costo. La estructura del algoritmo se mantiene: se resuelve de atrás hacia adelante con una recurrencia basada en el mejor valor futuro, y se guarda el camino o caminos de mayor ganancia.
 \end{itemize}
 
 \begin{figure}[H]
@@ -220,7 +220,7 @@ Investiga y documenta un problema real (logística, finanzas, biología computac
 \inputminted{cpp}{../e-n/e5.cpp}
 
 \begin{itemize}
-    \item /relleno
+    \item En este caso se estudia un problema real de producción e inventario, donde cada mes debe decidir cuánto producir para satisfacer la demanda con el menor costo total. El estado incluye el mes y el inventario disponible, y la programación dinámica permite elegir la mejor producción considerando el costo de fabricar, almacenar y el futuro de cada periodo.
 \end{itemize}
 
 \begin{figure}[H]
@@ -233,39 +233,20 @@ Investiga y documenta un problema real (logística, finanzas, biología computac
 \section{Cuestionario}
 
 \begin{enumerate}
-    \item ¿Qué dos condiciones debe cumplir un problema para poder resolverse con Programación Dinámica?
-    \item ¿Cuál es la diferencia principal entre memorización y tabulación?
-    \item En la técnica SRTBOT, ¿qué garantiza específicamente el paso del orden topológico?
-    \item ¿Por qué el problema de la diligencia puede tener más de una solución óptima?
-    \item ¿Por qué aplicar Programación Dinámica a un algoritmo como Mergesort (Laboratorio 3) no traería ninguna mejora de eficiencia?
+    \item ¿Qué dos condiciones debe cumplir un problema para poder resolverse con Programación Dinámica? La respuesta es que debe presentar subproblemas superpuestos y una estructura óptima, es decir, la solución del problema completo debe poder construirse a partir de soluciones correctas de subproblemas más pequeños. Si el problema no repite trabajo ni puede descomponerse en decisiones donde cada parte contribuya a una solución global, entonces la técnica no aporta un beneficio real.
+    \item ¿Cuál es la diferencia principal entre memorización y tabulación? La memorización es una estrategia top-down, que resuelve recursivamente y guarda los valores ya calculados para no repetirlos; en cambio, la tabulación sigue un enfoque bottom-up y llena la tabla desde los casos base hasta el estado final. Ambas son correctas, pero la manera de recorrer el problema y el uso de memoria son distintos.
+    \item En la técnica SRTBOT, ¿qué garantiza específicamente el paso del orden topológico? El orden topológico garantiza que cada estado se calcule después de los estados de los que depende. Esto evita que una solución parcial use información aún no resuelta y permite que la ecuación de recurrencia tenga sentido al momento de evaluar un problema concreto.
+    \item ¿Por qué el problema de la diligencia puede tener más de una solución óptima? Porque varias rutas distintas pueden llegar al mismo costo total, especialmente cuando existen empates entre decisiones alternativas. En esos casos, el algoritmo debe decidir si guarda solo una opción o conserva todas las que alcanzan el mismo valor óptimo, según el objetivo del problema.
+    \item ¿Por qué aplicar Programación Dinámica a un algoritmo como Mergesort (Laboratorio 3) no traería ninguna mejora de eficiencia? Porque Mergesort ya divide el problema en subproblemas disjuntos y cada parte se resuelve solo una vez, sin superposición ni reutilización repetida de resultados. La programación dinámica se beneficia cuando un mismo subproblema aparece muchas veces, algo que no ocurre en la estrategia de divide y vencerás del ordenamiento.
 \end{enumerate}
 
 \section{Conclusiones}
-% Pendiente de completar.
 
-	%\begin{itemize}	
-	%	\item Se creo el archivo \textbf{.gitignore} para no considerar los archivos %\textbf{*.class} que son innecesarios hacer seguimiento.
-	%\end{itemize}
-	%\begin{lstlisting}[language=bash]
-	%	$ vim lab01/.gitignore
-	%\end{lstlisting}
-	%\begin{lstlisting}[language=bash]
-	%	*.class
-	%\end{lstlisting}
-	%\begin{lstlisting}[language=bash]
-	%	$ git add .
-	%	$ git commit -m "Creando .gitignore para archivos *.class"			
-	%	$ git push -u origin main
-	%\end{lstlisting}
-	
-	%\begin{lstlisting}[language=bash]
-	%	$ vim lab01/Insertion.java
-	%\end{lstlisting}
-	
-    
-%\clearpage
-%\bibliographystyle{apalike}
-%\bibliographystyle{IEEEtranN}
-%\bibliography{bibliography}
-			
-\end{document}\noindent\textbf{Enunciado:}
+La programación dinámica resultó ser una herramienta muy útil para comprender cómo un problema puede resolverse de manera inteligente sin explorar todo el espacio de soluciones. A lo largo del laboratorio se observó que la clave no está solo en encontrar una fórmula recursiva, sino en reconocer cuándo los subproblemas se repiten y cuándo la solución óptima de un estado puede construirse a partir de soluciones de estados anteriores. Esa idea fue la base para resolver la diligencia, Fibonacci, los caminos óptimos con empates y el problema de producción e inventario.
+
+Una de las conclusiones más importantes es que la misma estructura conceptual se reutiliza en varios contextos: el problema de la diligencia, la optimización del camino máximo y la planificación de producción tienen la misma lógica general de estados, transiciones y costo acumulado. Lo que cambia es la interpretación del valor a optimizar y la forma en que se evalúan las decisiones. Esto muestra que la programación dinámica no es un algoritmo aislado, sino un enfoque de diseño general aplicable a una gran variedad de problemas de optimización.
+
+También se evidenció la diferencia entre la recursión ingenua y las versiones más eficientes. En Fibonacci, la solución recursiva directa repite muchos cálculos y crece exponencialmente; la memoización reduce el trabajo guardando resultados ya calculados, mientras que la tabulación elimina la recursión y procesa los estados en orden lógico. Esto deja claro que, en muchos casos, el costo real no está solo en la formulación del problema, sino en cómo se organizan los cálculos y cómo se reutiliza la información.
+
+Finalmente, el laboratorio permitió ver que la programación dinámica no solo sirve para encontrar una solución óptima, sino también para reconstruir el camino o la secuencia de decisiones que la alcanzan. Esto es especialmente relevante cuando hay empates o múltiples soluciones válidas, ya que la técnica puede guardar no solo el mejor valor, sino también todas las decisiones que lo sostienen. En ese sentido, la programación dinámica no es solo una estrategia de cálculo eficiente, sino también una forma de comprender la estructura interna del problema y de justificar matemáticamente por qué una solución es óptima.
+\end{document}

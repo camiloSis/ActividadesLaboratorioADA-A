@@ -40,10 +40,10 @@
 \newcommand{\itemDepartment}{Departamento Académico de Ingeniería de Sistemas e Informática}
 \newcommand{\itemSchool}{Escuela Profesional de Ingeniería de Sistemas}
 \newcommand{\itemAcademic}{2026 - B}
-\newcommand{\itemInput}{------}
-\newcommand{\itemOutput}{------}
+\newcommand{\itemInput}{29/10/2026}
+\newcommand{\itemOutput}{05/11/2026}
 \newcommand{\itemPracticeNumber}{07}
-\newcommand{\itemTheme}{Práctica de laboratorio 07}
+\newcommand{\itemTheme}{Programación Dinámica: Mochila 0/1 y Mochila Ilimitada}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -150,7 +150,9 @@
 \section{Ejercicios/Problemas propuestos}
 
 \subsection{Ejercicio 1}
-/relleno
+
+Implementa Mochila 0/1 para un conjunto de al menos 8 objetos ingresados por el usuario e imprime tanto el valor máximo como la lista de objetos elegidos.
+
 \inputminted{cpp}{../e-n/e1.cpp}
 
 \begin{itemize}
@@ -165,7 +167,9 @@
 \end{figure}
 
 \subsection{Ejercicio 2}
-/relleno
+
+Implementa Mochila Ilimitada para el clásico «problema del cambio de monedas»: dado un conjunto de denominaciones y un monto objetivo, encuentra la combinación que usa la menor cantidad de monedas.
+
 \inputminted{cpp}{../e-n/e2.cpp}
 
 \begin{itemize}
@@ -180,7 +184,9 @@
 \end{figure}
 
 \subsection{Ejercicio 3}
-/relleno
+
+Modifica la solución de Mochila 0/1 para que, además del valor máximo, muestre la tabla `dp` completa (todas las filas y columnas) y explique cómo se reconstruyó la solución.
+
 \inputminted{cpp}{../e-n/e3.cpp}
 
 \begin{itemize}
@@ -195,7 +201,9 @@
 \end{figure}
 
 \subsection{Ejercicio 4}
-/relleno
+
+Compara el uso de memoria de Mochila 0/1 (tabla 2D) contra una versión optimizada que use solo un arreglo 1D recorrido de derecha a izquierda. Explica por qué ese recorrido evita reutilizar el mismo objeto más de una vez.
+
 \inputminted{cpp}{../e-n/e4.cpp}
 
 \begin{itemize}
@@ -210,7 +218,9 @@
 \end{figure}
 
 \subsection{Ejercicio 5}
-/relleno
+
+Aplica Mochila 0/1 a un caso real: dado un presupuesto fijo y una lista de posibles compras (con costo y beneficio estimado), determina la combinación que maximiza el beneficio sin exceder el presupuesto.
+
 \inputminted{cpp}{../e-n/e5.cpp}
 
 \begin{itemize}
@@ -225,7 +235,13 @@
 \end{figure}
 
 \section{Cuestionario}
-% Pendiente de completar.
+\begin{enumerate}
+    \item ¿Por qué Mochila 0/1 necesita una tabla bidimensional, mientras que Mochila Ilimitada se resuelve con un arreglo unidimensional?
+    \item En Mochila 0/1, ¿qué representa exactamente el valor \texttt{dp[i][w]}?
+    \item ¿Por qué en el ejemplo resuelto Mochila Ilimitada obtiene un valor mayor que Mochila 0/1 con la misma capacidad?
+    \item ¿Cómo se podría adaptar Mochila 0/1 para permitir llevar cada objeto hasta un número limitado de veces (por ejemplo, máximo 3 unidades de cada uno)?
+    \item ¿Qué papel cumple el paso B (casos base) de SRTBOT en ambas variantes de la mochila?
+\end{enumerate}
 
 \section{Conclusiones}
 % Pendiente de completar.
